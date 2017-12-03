@@ -2,39 +2,62 @@
 @font-face {
     font-family: OpenSans-Light;
     src:url(fonts/OpenSans-Light.ttf);
-    font-family: OpenSans-Regular;
-    src:url(fonts/OpenSans-Regular.ttf);
-    font-family: Raleway-Light;
-    src:url(fonts/Raleway-Light.ttf);
     font-family: Roboto-Thin;
     src:url(fonts/Roboto-Thin.ttf);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .current {
-    background-color: #3DBBE5;
+    background-color: #3D78E5;
     color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-body {font-family: 'OpenSans-Regular', sans-serif;
-     font-size: 100%;
-     background-color: #ffffff;
+a {
+    color: #3DBBE5;
+    text-decoration: none;
+}
+#content a:hover {
+    color: #3D59E5;
+    transition: background-color 0.5s, ease 0.5s;
+}
+
+body {
+    font-family: Verdana, Georgia, 'Times New Roman', sans-serif;
+     font-size: 12pt;
+     background-color: #E2E2E2;
      margin: 0;
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 16px;
+    width: 152.5px;
+}
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+}
 h1 {
-    font-family: 'OpenSans-Regular', sans-serif;
-
+    font-family: 'Open Sans', sans-serif;
 }
 h2{
-    font-family: 'OpenSans-Regular', sans-serif;
+    font-family: 'Roboto-Thin', sans-serif;
     padding-left: 10px;
-    font-size: 250%;
+    font-size: 28pt;
     text-align: left;
+    background-color: #282828;
 }
 
 h3
 {
-     background-color: grey;
+    color: white;
+    background-color: #3F3F3F;
+    padding-left: 10px;
+
 }
 
 h6{text-align: center;
@@ -45,12 +68,6 @@ img {display:block;
     margin-right: auto;
 }
 
-/* Div formatting */
-#bannerImage{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
 #header
 {
 	background: linear-gradient(to left, #464646,#272727);
@@ -62,18 +79,19 @@ img {display:block;
 
 #assignment_info_header
 {
-     background: linear-gradient(to left, #464646,#272727);
-	text-align: left;
-	font-family: Couture;
-	background-color: #222222;
-	color: #ffffff;
-     font-size: 125%;
-     padding-top: 5px;
-     padding-left: 5px;
-     padding-bottom: 5px;
+    background: linear-gradient(to left, #464646,#272727);
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 14pt;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
 }
 
-#container {min-height: 1024px;
+#container {
     min-width: 768px;
     text-align: center;
 }
@@ -89,6 +107,11 @@ img {display:block;
     border-bottom: 1px solid grey;
     width: 100%;
 }
+#navItems {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
 #content{width:50%;
          min-width: 940px;
          min-height: 200px;
@@ -99,40 +122,70 @@ img {display:block;
          box-shadow: 5px 5px 5px #888888;
 	    text-align: justify;
 }
-
-#content_text{
-		 padding-left: 10px;
-		 padding-right: 10px;
+.demoContentOdd {
+    z-index: 100;
+    width:40%;
+    min-width: 640px;
+    min-height: 300px;
+    padding-bottom:10px;
+    padding-right: 50px;
+    margin-left:0;
+    margin-right:auto;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #888888;
+    text-align: left;
+}
+.demoContentEven {
+    z-index: 100;
+    width:40%;
+    min-width: 640px;
+    min-height: 300px;
+    padding-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #888888;
+    text-align: right;
+}
+#contentText{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#contentcontact{min-width: 480px;
-               min-height: 600px;
-               padding-left:10px;
-               padding-right:10px;
-               padding-top:10px;
-               padding-bottom:10px;
-               margin-left:150px;
-               border: 5px solid #000000;
-               background-color: #c0c0c0;
-               box-shadow: 10px 10px 5px #888888;
+.downloadLinks {
+    float: right;
 }
-#quicklinks{float: right;
-            width: 10%;
-            padding-left: 10px;
-            padding-right: 5px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-color: #3f3f3f;
-            color: #e5e5e5;
-            font-size: 80%;
+.downloadLinks a:hover {
+    color: #3D59E5;
+    transition: background-color 0.5s, ease 0.5s;
 }
-#quicklinks a:visited {color: #828282;
+
+#demoContent img {
+    float: right;
+    transition: 0.2s;
+    position: absolute;
+    border: 2px solid #222222;
 }
-#quicklinks a:link{color: #e5e5e5;
+
+#demoContent img:hover {
+    position: absolute;
+    transform:scale(1.5);
+    transition: 0.2s;
+    border: 2px solid #222222;
+    box-shadow: 5px 5px 5px black;
 }
-#quicklinks a:hover{color: #a5a5a5;
-}
-#quicklinks a:active{color:#6b6b6b;
+
+#contentcontact{
+    min-width: 480px;
+    min-height: 600px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:150px;
+    border: 5px solid #000000;
+    background-color: #c0c0c0;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 #assignment_info
@@ -145,12 +198,6 @@ img {display:block;
 }
 
 /* Other ID declaration and formatting */
-#logo {display:block;
-      border: 1px solid #000000;
-	 background-color: #444444;
-      box-shadow: 2px 2px 2px #d3d3d3;
-      margin-right: 30px;
-}
 #footernav{text-align: center;
 }
 #footernav a{margin-right: 20px;
@@ -187,17 +234,14 @@ li a{
     cursor: pointer;
     text-decoration: none;
     list-style-type: none;
+    transition: color 0.2s ease 0s, background-color 0.2s ease 0s;
 }
-
 /* Dropdown button on hover & focus */
 li a:hover{
     background-color: #3DBBE5;
     color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}

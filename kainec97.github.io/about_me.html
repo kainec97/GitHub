@@ -9,6 +9,7 @@
           <meta name="author" content="Kaine Cochrane">
           <link rel="stylesheet" href="css/styles.css">
           <link rel="shortcut icon" href="img/favicon.ico">
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
      </head>
      <body>
           <div id="container">
@@ -16,13 +17,19 @@
 
                <!-- div for navigation bar -->
                <div id="navigation">
-                    <ul>
-                         <li><a href="index.html">Home</a></li>
-                         <li><a class="current" href="#">About Me</a></li>
-                         <li><a href="documents.html">Documents</a></li>
-                         <li><a href="skill_demo.html">Skill Demo.</a></li>
-                         <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                   <div id="navItems">
+                   <ul>
+                       <li><a href="index.html">Home</a></li>
+                       <li><a class="current" href="#">About Me</a></li>
+                       <li class="dropdown">
+                       <a id="dropdownHeader" href="javascript:void(0)">Documents</a>
+                       <div class="dropdown-content">
+                           <a href="documents.html">Résumé</a>
+                           <a href="skill_demo.html">Skill Demo.</a>
+                       </div>
+                       <li><a href="contact.html">Contact</a></li>
+                   </ul>
+                   </div>
                </div>
 
                <!-- div for centre column (Content) -->
@@ -32,13 +39,13 @@
                     </div>
 
                     <div id="content_text">
-                         <img src="img/kainec.jpg" height="128px" width="128px" title="Photo of Me"
+                         <img id = "photoOfMe" src="img/kainec.jpg" height="128px" width="128px" title="Photo of Me"
                          alt="Photo of Me" style="float: right; border: 3px solid #222222;
-                         border-radius: 5px; margin: 10px; margin-top: 35px;">
+                         margin: 10px; margin-top: 35px;">
                          <h3> General Information </h3>
                          My name is Kaine Cochrane. I am currently 19 years old and was born on the
                          11th of October, 1997. At the moment I am living on the Gold Coast,
-                         and planning to complete my studies at <a href="http://www.scu.edu.au/" target="_blank">Southern Cross University</a>)
+                         and planning to complete my studies at <a href="http://www.scu.edu.au/" target="_blank">Southern Cross University</a>
                          by February 2018.
                          <br><br>
                          I graduated from Elanora State High School at the end of 2014.
